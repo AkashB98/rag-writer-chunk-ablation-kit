@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "detail": "S: max(writer 0.168131, expansion 0.204761) > retriever 0.0",
+      "name": "reversal_direction_S",
+      "passed": true
+    },
+    {
+      "detail": "M: retriever 0.5 > max(writer -0.055958, expansion 0.035294)",
+      "name": "reversal_direction_M",
+      "passed": true
+    },
+    {
+      "detail": "S=True M=True",
+      "name": "reversal_holds_overall",
+      "passed": true
+    },
+    {
+      "detail": "all 24 cells within 0.001 of pinned values",
+      "name": "per_cell_quality_pinned",
+      "passed": true
+    },
+    {
+      "detail": "cells=24",
+      "name": "cell_count_24",
+      "passed": true
+    },
+    {
+      "detail": "regime S, all retriever/width pairs",
+      "name": "terse_faithfulness_ge_verbose_S",
+      "passed": true
+    },
+    {
+      "detail": "regime M, all retriever/width pairs",
+      "name": "terse_faithfulness_ge_verbose_M",
+      "passed": true
+    },
+    {
+      "detail": "S expansion 0.204761 > M expansion 0.035294",
+      "name": "expansion_helps_S_more_than_M",
+      "passed": true
+    },
+    {
+      "detail": "M retriever delta 0.5",
+      "name": "expanded_beats_exact_in_M",
+      "passed": true
+    },
+    {
+      "detail": "S retriever delta 0.0",
+      "name": "retrievers_similar_in_S",
+      "passed": true
+    },
+    {
+      "detail": "verbose at width 2 covers spread facts terse misses in S",
+      "name": "verbose_beats_terse_correctness_S_width2",
+      "passed": true
+    },
+    {
+      "detail": "two factorial runs compared",
+      "name": "determinism_factorial_rerun_identical",
+      "passed": true
+    }
+  ],
+  "deltas": {
+    "M": {
+      "expansion_delta": 0.035294,
+      "retriever_delta": 0.5,
+      "writer_delta": -0.055958
+    },
+    "S": {
+      "expansion_delta": 0.204761,
+      "retriever_delta": 0.0,
+      "writer_delta": 0.168131
+    }
+  },
+  "passed": 12,
+  "reversal": {
+    "M": true,
+    "S": true,
+    "holds": true
+  },
+  "total": 12
+}
